@@ -1,4 +1,4 @@
-package leetCodeSolutions.mediumProblems.RemoveNthNodeFromEndOfList19;
+package leetCodeSolutions.mediumProblems.removeNthNodeFromEndOfList19;
 
 public class Solution {
     public ListNode removeNthFromEnd(ListNode head, int n) {
