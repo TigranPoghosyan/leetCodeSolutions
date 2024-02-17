@@ -1,4 +1,4 @@
-package leetCodeSolutions.mergeTwoSortedLists;
+package leetCodeSolutions.easyProblems.mergeTwoSortedLists21;
 
 public class ListNode {
     int val;
