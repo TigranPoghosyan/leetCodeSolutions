@@ -1,4 +1,4 @@
-package leetCodeSolutions.easyProblems.validParentheses;
+package leetCodeSolutions.easyProblems.validParentheses20;
 
 import java.util.Stack;
 
