@@ -1,4 +1,4 @@
-package leetCodeSolutions.mediumProblems.binarySearch704;
+package leetCodeSolutions.easyProblems.binarySearch704;
 
 public class Main {
     public static void main(String[] args) {
