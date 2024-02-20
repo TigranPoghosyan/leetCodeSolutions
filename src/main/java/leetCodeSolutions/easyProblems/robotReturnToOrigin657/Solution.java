@@ -1,4 +1,4 @@
-package leetCodeSolutions.easyProblems.RobotReturnToOrigin657;
+package leetCodeSolutions.easyProblems.robotReturnToOrigin657;
 
 public class Solution {
     public boolean judgeCircle(String moves) {

@@ -1,4 +1,4 @@
-package leetCodeSolutions.easyProblems.RobotReturnToOrigin657;
+package leetCodeSolutions.easyProblems.robotReturnToOrigin657;
 
 public class Main {
     public static void main(String[] args) {
