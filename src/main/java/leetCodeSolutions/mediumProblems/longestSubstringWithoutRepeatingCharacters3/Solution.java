@@ -10,7 +10,6 @@ public class Solution {
         int max = 0;
 
         Set<Character> set = new HashSet<>();
-
         while (second <= s.length() - 1){
 
             if (!set.contains(s.charAt(second))){
