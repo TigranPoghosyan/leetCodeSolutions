@@ -1,4 +1,4 @@
-package leetCodeSolutions.mediumProblems.TwoSumTwoInputArrayIsSorted167;
+package leetCodeSolutions.mediumProblems.twoSumTwoInputArrayIsSorted167;
 
 import java.util.Arrays;
 

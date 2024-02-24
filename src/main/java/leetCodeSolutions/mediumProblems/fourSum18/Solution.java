@@ -1,4 +1,4 @@
-package leetCodeSolutions.mediumProblems.FourSum18;
+package leetCodeSolutions.mediumProblems.fourSum18;
 
 import java.util.ArrayList;
 import java.util.Arrays;
