@@ -19,8 +19,7 @@ class Solution {
         if (pos == length) answer.add(sb.toString());
         else {
             char[] letters = LETTERS[Character.getNumericValue(digits.charAt(pos))];
-            for (int i = 0; i < letters.length; i++)
-                dfs(pos+1, length, new StringBuilder(sb).append(letters[i]), answer, digits);
+            for (char letter : letters) dfs(pos + 1, length, new StringBuilder(sb).append(letter), answer, digits);
         }
     }
 }
