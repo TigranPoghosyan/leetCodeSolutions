@@ -1,0 +1,22 @@
+package leetCodeSolutions.easyProblems.fizzBuzz412;
+
+import java.util.ArrayList;
+import java.util.List;
+
+public class Solution {
+    public List<String> fizzBuzz(int n) {
+        List<String> result = new ArrayList<>();
+        for (int i = 1; i <= n; i++) {  // Corrected the loop condition
+            if (i % 3 == 0 && i % 5 != 0) {
+                result.add("Fizz");
+            } else if (i % 3 != 0 && i % 5 == 0) {
+                result.add("Buzz");
+            } else if (i % 5 == 0 && i % 3 == 0) {
+                result.add("FizzBuzz");
+            } else {
+                result.add(Integer.toString(i));  // Using Integer.toString() instead of concatenation
+            }
+        }
+        return result;
+    }
+}
