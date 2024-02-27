@@ -12,7 +12,7 @@ class Solution {
             largestCount = Math.max(largestCount, arr[s.charAt(end) - 'A']);
             if(end - start + 1 - largestCount > k){
                 arr[s.charAt(start) - 'A']--;
-                start ++;
+                start++;
             }
             maxlen = Math.max(maxlen, end - start + 1);
         }
