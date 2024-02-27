@@ -3,16 +3,15 @@ package leetCodeSolutions.mediumProblems.findFirstAndLastPositionOfElementInSort
 public class Solution {
     public int[] searchRange(int[] nums, int target) {
         int[] result = new int[2];
-        result[0] = findStartIndex(nums, target);
-        result[1] = findEndIndex(nums, target);
+        result[0] = findFirstIndex(nums, target);
+        result[1] = findSecondIndex(nums, target);
         return result;
     }
 
-    public int findStartIndex(int[] nums, int target) {
-        int index = -1;
-
+    private int findFirstIndex(int[] nums, int target) {
         int start = 0;
         int end = nums.length - 1;
+        int index = -1;
 
         while (start <= end) {
             int mid = start + (end - start) / 2;
@@ -25,15 +24,13 @@ public class Solution {
                 index = mid;
             }
         }
-
         return index;
     }
 
-    public int findEndIndex(int[] nums, int target) {
-        int index = -1;
-
+    private int findSecondIndex(int[] nums, int target) {
         int start = 0;
         int end = nums.length - 1;
+        int index = -1;
 
         while (start <= end) {
             int mid = start + (end - start) / 2;
@@ -44,10 +41,8 @@ public class Solution {
             }
             if (nums[mid] == target) {
                 index = mid;
-
             }
         }
-
         return index;
     }
 }
