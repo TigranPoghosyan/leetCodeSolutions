@@ -1,22 +1,31 @@
 package leetCodeSolutions.mediumProblems.sumOfEvenNumbersAfterQueries985;
 
 class Solution {
-    public int[] sumEvenAfterQueries(int[] A, int[][] queries) {
-        int S = 0;
-        for (int x: A)
-            if (x % 2 == 0)
-                S += x;
+    public int[] sumEvenAfterQueries(int[] nums, int[][] queries) {
+        int[] outputArray = new int[queries.length];
 
-        int[] ans = new int[queries.length];
+        int evenSum = 0;
 
-        for (int i = 0; i < queries.length; ++i) {
-            int val = queries[i][0], index = queries[i][1];
-            if (A[index] % 2 == 0) S -= A[index];
-            A[index] += val;
-            if (A[index] % 2 == 0) S += A[index];
-            ans[i] = S;
+        for (int val : nums) {
+            if (val % 2 == 0) {
+                evenSum += val;
+            }
         }
 
-        return ans;
+        for (int i = 0; i < queries.length; i++) {
+            int index = queries[i][1];
+            int value = queries[i][0];
+
+            if (nums[index] % 2 == 0) {
+                evenSum -= nums[index];
+            }
+            nums[index] += value;
+
+            if (nums[index] % 2 == 0) {
+                evenSum += nums[index];
+            }
+            outputArray[i] = evenSum;
+        }
+        return outputArray;
     }
 }
