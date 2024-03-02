@@ -2,19 +2,13 @@ package leetCodeSolutions.easyProblems.longestContinuousIncreasingSubsequence674
 
 public class Solution {
     public int findLengthOfLCIS(int[] nums) {
-        int result = 0;
-        int first = 0;
-        int second = 1;
-        while(second < nums.length){
-            if(nums[first] < nums[second]){
-                result = Math.max(result,second-first + 1);
-                second++;
-            }
-            else{
-                first++;
-                second++;
-            }
+        int max = 1;
+        int currentMax = 1;
+
+        for (int i = 1; i < nums.length; i++) {
+            currentMax = nums[i] > nums[i - 1] ? currentMax + 1 : 1;
+            max = Math.max(max, currentMax);
         }
-        return result;
+        return max;
     }
 }
