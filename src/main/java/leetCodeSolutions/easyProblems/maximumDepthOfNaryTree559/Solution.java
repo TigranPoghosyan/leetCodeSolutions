@@ -1,27 +1,47 @@
 package leetCodeSolutions.easyProblems.maximumDepthOfNaryTree559;
 
-import java.util.LinkedList;
-import java.util.Queue;
-
 public class Solution {
+    private int maxDepth;
+
     public int maxDepth(Node root) {
-        if(root == null){
+        //DFS Solution
+        if (root == null) {
             return 0;
         }
-        int depth = 0;
-        Queue<Node> queue = new LinkedList<>();
-        queue.offer(root);
+        getMaxDepth(root, 1);
+        return maxDepth;
+    }
 
-        while(!queue.isEmpty()){
-            int size = queue.size();
-            for(int i = 0;i<size;i++){
-                Node currentNode = queue.poll();
-                for(Node child:currentNode.children){
-                    queue.offer(child);
-                }
-            }
-            depth++;
+    public void getMaxDepth(Node node, int depth) {
+        if (node == null) {
+            return;
         }
-        return depth;
+        maxDepth = Math.max(maxDepth, depth);
+        for (Node child : node.children) {
+            getMaxDepth(child, depth + 1);
+        }
     }
 }
+
+
+//BFS Solution
+//public int maxDepth(Node root) {
+//    if(root == null){
+//        return 0;
+//    }
+//    int depth = 0;
+//    Queue<Node> queue = new LinkedList<>();
+//    queue.offer(root);
+//
+//    while(!queue.isEmpty()){
+//        int size = queue.size();
+//        for(int i = 0;i<size;i++){
+//            Node currentNode = queue.poll();
+//            for(Node child:currentNode.children){
+//                queue.offer(child);
+//            }
+//        }
+//        depth++;
+//    }
+//    return depth;
+//}
