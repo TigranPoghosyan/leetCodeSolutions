@@ -4,19 +4,20 @@ import java.util.PriorityQueue;
 
 class Solution {
     public boolean isNStraightHand(int[] hand, int groupSize) {
-        if(hand.length % groupSize != 0) return false;
-
-        PriorityQueue<Integer> minHeap = new PriorityQueue<>();
-        for(int elem: hand) {
-            minHeap.add(elem);
+        if (hand.length % groupSize != 0) {
+            return false;
         }
-
-        while(!minHeap.isEmpty()){
-            int head = minHeap.poll();
-            for(int i=1; i<groupSize; i++)
-                if(!minHeap.remove(head+i)){
+        PriorityQueue<Integer> queue = new PriorityQueue<>();
+        for (int elem : hand) {
+            queue.add(elem);
+        }
+        while (!queue.isEmpty()) {
+            int value = queue.poll();
+            for (int i = 1; i < groupSize; i++) {
+                if (!queue.remove(value + i)) {
                     return false;
                 }
+            }
         }
         return true;
     }
