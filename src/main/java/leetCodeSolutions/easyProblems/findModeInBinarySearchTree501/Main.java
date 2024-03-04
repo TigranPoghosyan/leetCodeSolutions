@@ -1,5 +1,7 @@
 package leetCodeSolutions.easyProblems.findModeInBinarySearchTree501;
 
+import java.util.Arrays;
+
 public class Main {
     public static void main(String[] args) {
         Solution solution = new Solution();
@@ -7,6 +9,6 @@ public class Main {
         root.right = new TreeNode(2);
         root.right.left = new TreeNode(2);
         int[] result = solution.findMode(root);
-        System.out.println(result);
+        System.out.println(Arrays.toString(result));
     }
 }
