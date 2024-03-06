@@ -31,7 +31,6 @@ class Solution {
             }
         }
 
-        // Return the populated result array containing max of each sliding window
         return result;
     }
 }
