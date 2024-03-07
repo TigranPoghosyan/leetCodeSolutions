@@ -47,5 +47,7 @@ public class Solution {
         return "-1";
     }
 
-
+    private boolean isChar(char c) {
+        return c >= 'a' && c <= 'z' || c >= 'A' && c <= 'Z';
+    }
 }
