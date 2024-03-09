@@ -1,18 +1,29 @@
 package leetCodeSolutions.easyProblems.setMismatch645;
 
+import java.util.HashSet;
+
 public class Solution {
     public int[] findErrorNums(int[] nums) {
-        int num = 0;
-        for(int i = 0;i<nums.length;i++){
-            num ^= nums[i];
+
+        int dup = 0, miss = 0;
+        HashSet<Integer> set = new HashSet<>();
+
+        // find duplicate using set
+        for (int num : nums) {
+            if (set.contains(num)) {
+                dup = num;
+            }
+            set.add(num);
         }
-        for(int i =0;i<nums.length;i++){
-            if(nums[i] == num-1){
-                return new int[]{num-1,num};
-            }else if(nums[i] == num + 1){
-                return new int[]{num+1,num};
+
+        // find missing
+        for (int i = 1; i <= nums.length; ++i) {
+            if (!set.contains(i)) {
+                miss = i;
+                break;
             }
         }
-        return new int[]{};
+
+        return new int[]{dup, miss};
     }
 }
