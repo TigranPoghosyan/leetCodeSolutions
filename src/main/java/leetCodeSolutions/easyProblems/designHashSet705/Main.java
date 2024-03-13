@@ -11,6 +11,5 @@ public class Main {
         solution.contains(2); // return True
         solution.remove(2);   // set = [1]
         solution.contains(2); // return False, (already removed)
-        System.out.println(solution);
     }
 }
