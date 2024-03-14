@@ -31,9 +31,7 @@ public class Solution {
         int left = val;
         int right = nums.length - 1;
         while (left < right) {
-            int temp = nums[left];
-            nums[left] = nums[right];
-            nums[right] = temp;
+            swap(nums, left, right);
             left++;
             right--;
         }
