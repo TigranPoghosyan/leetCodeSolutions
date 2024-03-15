@@ -9,18 +9,18 @@ class Solution {
         Arrays.sort(nums);
         List<List<Integer>> result = new ArrayList<>();
         List<Integer> current = new ArrayList<>();
-        backTracking(0, nums, result, current);
+        findAllSubsets(0, nums, result, current);
         return result;
     }
 
-    public void backTracking(int index, int[] nums, List<List<Integer>> result, List<Integer> current) {
+    public void findAllSubsets(int index, int[] nums, List<List<Integer>> result, List<Integer> current) {
         result.add(new ArrayList<>(current));
         for (int i = index; i < nums.length; i++) {
             if (i != index && nums[i] == nums[i - 1]) {
                 continue;//skip the duplicates, except for the first time
             }
             current.add(nums[i]); //include
-            backTracking(i + 1, nums, result, current); //explore
+            findAllSubsets(i + 1, nums, result, current); //explore
             current.remove(current.size() - 1);//backtrack, remove the element
         }
     }
