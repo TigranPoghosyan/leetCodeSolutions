@@ -8,8 +8,8 @@ class Solution {
     List<List<Integer>> output;
     public List<List<Integer>> subsetsWithDup(int[] nums) {
         Arrays.sort(nums);
-        output = new ArrayList();
-        backTracking(0,nums, new ArrayList());
+        output = new ArrayList<>();
+        backTracking(0,nums, new ArrayList<>());
         return output;
     }
     public void backTracking(int index, int[] nums, List<Integer> list){
