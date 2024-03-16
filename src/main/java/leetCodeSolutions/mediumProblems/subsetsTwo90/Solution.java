@@ -19,7 +19,7 @@ class Solution {
             if (i != index && nums[i] == nums[i - 1]) {
                 continue;
             }
-            current.add(nums[i]); //include
+            current.add(nums[i]);
             findAllSubsets(i + 1, nums, result, current); //explore
             current.remove(current.size() - 1);//backtrack, remove the element
         }
