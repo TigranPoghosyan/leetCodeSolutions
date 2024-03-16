@@ -20,7 +20,7 @@ class Solution {
                 continue;
             }
             current.add(nums[i]);
-            findAllSubsets(i + 1, nums, result, current); //explore
+            findAllSubsets(i + 1, nums, result, current);
             current.remove(current.size() - 1);//backtrack, remove the element
         }
     }
