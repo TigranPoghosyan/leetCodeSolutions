@@ -21,7 +21,7 @@ class Solution {
             }
             current.add(nums[i]);
             findAllSubsets(i + 1, nums, result, current);
-            current.remove(current.size() - 1);
+            current.remove(current.size() - 1);//backtrack, remove the element
         }
     }
 }
