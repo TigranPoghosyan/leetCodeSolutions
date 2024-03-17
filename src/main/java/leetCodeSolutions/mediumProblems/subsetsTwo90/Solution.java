@@ -17,7 +17,7 @@ class Solution {
         result.add(new ArrayList<>(current));
         for (int i = index; i < nums.length; i++) {
             if (i != index && nums[i] == nums[i - 1]) {
-                continue;//skip the duplicates, except for the first time
+                continue;
             }
             current.add(nums[i]); //include
             findAllSubsets(i + 1, nums, result, current); //explore
