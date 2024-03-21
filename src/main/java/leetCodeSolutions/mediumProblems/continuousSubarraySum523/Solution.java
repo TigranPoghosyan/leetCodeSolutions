@@ -15,7 +15,7 @@ public class Solution {
                 }
                 int left = right - 2;
 
-//                while ((left >= 0) && (prefix[right] - prefix[left] >= k)) {
+                while ((left >= 0) && (prefix[right] - prefix[left] >= k)) {
                     if (((prefix[right] - prefix[left]) & k) == 0) {
                         return true;
                     }
